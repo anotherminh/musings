@@ -1,11 +1,11 @@
 This repo contains small code snippets that I've written for learning & entertainment purposes.
 
-To run anything, you'll need to install [Scala](https://www.scala-lang.org/download/2.12.2.html) and [ammonite](http://ammonite.io/#Ammonite-REPL).
-
 ### MontyHall
-I started this repo with writing a simulation of the MontyHall problem and its many variations. The inspiration was from reading [this paper](http://www.probability.ca/jeff/writing/montyfall.pdf).
-Usage example:
+I started this repo with writing a simulation of the MontyHall problem and its many variations. My hope was to form better intuitions around the problem. The inspiration was from reading [this paper](http://www.probability.ca/jeff/writing/montyfall.pdf).
 
+Installation Requirements: [Scala](https://www.scala-lang.org/download/2.12.2.html) and [ammonite](http://ammonite.io/#Ammonite-REPL).
+
+Usage example:
 ```
 $ amm Monty.sc
 Compiling /musings/Monty.sc
@@ -29,4 +29,29 @@ Ran 10000 trials for the game MontySmall
 Results based on 3738 valid games:
 Stick Strategy: 8.908507% wins
 Switch Strategy: 91.0915% wins
+```
+
+### Minesweeper in Ruby REPL
+A classic test for coding interviews is to implement a simple grid-based game so I wrote minesweeper.
+
+Requirements: ruby & your favorite ruby console (e.g. irb, pry)
+
+Usage example (in the console):
+```
+irb(main):001:0> load 'minesweeper.rb'
+=> true
+irb(main):002:0> Minesweer.new.play // Here you can also modify the width, height, and bomb_count
+
+["0", "0", "0", "0", "0", "0", "0", "1", " ", " "]
+["0", "0", "0", "0", "0", "0", "1", " ", " ", " "]
+["0", "0", "0", "0", "0", "0", "1", " ", " ", "2"]
+["0", "0", "0", "0", "0", "0", "0", "1", "1", "0"]
+["0", "1", "0", "0", "0", "0", "0", "0", "0", "0"]
+["1", " ", "1", "0", "0", "0", "0", "0", "0", "0"]
+[" ", "1", "0", "0", "0", "0", "0", "0", "0", "1"]
+[" ", "1", "0", "0", "0", "0", "0", "0", "1", " "]
+["1", "0", "0", "0", "0", "0", "1", "1", " ", " "]
+["0", "0", "0", "0", "0", "1", " ", " ", " ", " "]
+Please enter two valid numbers for the cell you want to select, separated by space, eg. "0 3"
+
 ```
